@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!--Fontawesome CDN Link---->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
@@ -13,67 +14,83 @@
 <body>
     <div class="section">
         <div class="navbar">
-          <div class="logo">
-            <a href="../index.html"
-              ><img src="../images/download.png" width="130px"
-            /></a>
-          </div>
-          <nav>
-            <ul id="MenuItems">
-              <li><a href="../">Home</a></li>
-              <li><a href="../product.html">Product</a></li>
-              <li><a href="../about/">About</a></li>
-              <li><a href="../contact">Contact</a></li>
-              <!-- <li><a href="">Account</a></li> -->
-            </ul>
-          </nav>
-          <a href="../cart.html"><img src="../images/cart.png" width="30px" height="30px" />
-          </a>
-        </div>
-    <div class="container">
-        <div class="content">
-            <div class="left-side">
-                <div class="address details">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="topic">Address</div>
-                    <div class="text-one">Accra</div>
-                    <div class="text-two">Pkoase Ayawaso Road</div>
-                </div>
-                <div class="Phone details">
-                    <i class="fas fa-phone-alt"></i>
-                    <div class="topic">Phone</div>
-                    <div class="text-one">+233 549 783 787</div>
-                    <div class="text-two">+233 508 557 693</div>
-                </div>
-                <div class="Email details">
-                    <i class="fas fa-envelope"></i>
-                    <div class="topic">Email</div>
-                    <div class="text-one">keny.edem@gmail.com</div>
-                    <div class="text-two">keny.edem@gmail.com</div>
-                </div>
+            <div class="logo">
+              <a href="../index.html"
+                ><img src="../images/download.png" width="130px"
+              /></a>
             </div>
-            <div class="right-side">
-                <div class="topic-text">Send us a message</div>
-                <p>If you have any work for me,
-                    you can send me a message from here. its my pleasure to help you</p>
-
-                <form action="#">
-                    <div class="input-box">
-                        <input type="text" placeholder="Enter your name">
+            <nav>
+              <ul id="MenuItems">
+                <li><a href="">Home</a></li>
+                <li><a href="../product.html">Product</a></li>
+                <li><a href="../about">About</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </nav>
+            <a href="../cart.html"
+              ><img src="../images/cart.png" width="30px" height="30px" />
+            </a>
+            <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()" />
+          </div>
+        <div class="container">
+            <div class="content">
+                <div class="left-side">
+                    <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">Accra</div>
+                        <div class="text-two">Pkoase Ayawaso Road</div>
                     </div>
-                    <div class="input-box">
-                        <input type="text" placeholder="Enter your email">
+                    <div class="Phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">+233 549 783 787</div>
+                        <div class="text-two">+233 508 557 693</div>
                     </div>
-                    <div class="input-box message-box">
-                        <textarea></textarea>
-                    <div class="button">
-                        <input type="button" value="Send now">
-                    </div>
+                    <div class="Email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">keny.edem@gmail.com</div>
+                        <div class="text-two">keny.edem@gmail.com</div>
                     </div>
                 </div>
-            </form>
+                <div class="right-side">
+                    <div class="topic-text">Send us a message</div>
+                    <p>If you have any work for me,
+                        you can send me a message from here. its my pleasure to help you</p>
+
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea></textarea>
+                            <div class="button">
+                                <input type="button" value="Send now">
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
         </div>
     </div>
-    </div>
-</body>   
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+
 </html>
